@@ -92,9 +92,19 @@ a {
 input[type='text'] {
   padding: 0.3rem;
   border: none;
+  outline: none;
   border-bottom: 2px solid var(--tertiary-color);
   margin-bottom: 1rem;
   background-color: var(--primary-color);
+  transition: all ease 0.4s;
+}
+
+input[type='text']:focus {
+  border-bottom: 2px solid white;
+}
+
+input[type='text']:hover {
+  border-bottom: 2px solid white;
 }
 
 .search__btn {
@@ -137,11 +147,11 @@ input[type='text'] {
 }
 
 .clear-btn:hover {
-  transform: scale(1.02);
+  transform: scale(1.01);
 }
 
 .search__btn:hover {
-  transform: scale(1.02);
+  transform: scale(1.01);
 }
 
 .card-title {
