@@ -109,18 +109,20 @@ input[type='text']:hover {
 
 .search__btn {
   padding: 0.1rem;
+  margin-bottom: 0.2rem;
   background-color: var(--tertiary-color);
   color: white;
   font-size: 1.2rem;
   cursor: pointer;
-  transition: all 0.08s ease;
+  transition: all 0.1s ease;
 }
 
 .clear-btn {
   padding: 0.1rem;
+  margin-top: 0.2rem;
   font-size: 1.2rem;
   background-color: var(--secondary-color);
-  transition: all 0.08s ease;
+  transition: all 0.1s ease;
   cursor: pointer;
   color: white;
 }
@@ -131,12 +133,13 @@ input[type='text']:hover {
   cursor: pointer;
   background-color: var(--tertiary-color);
   border: 1px black solid;
-  transition: all 0.08s ease;
+  transition: all 0.1s ease;
   color: white;
 }
 
 .genre-btn:hover {
   transform: scale(1.05);
+  background-color: var(--secondary-color);
 }
 
 .GenreButtons {
@@ -147,32 +150,51 @@ input[type='text']:hover {
 }
 
 .clear-btn:hover {
-  transform: scale(1.01);
+  transform: scaleY(1.1);
+  transform: scaleX(1.01);
 }
 
 .search__btn:hover {
-  transform: scale(1.01);
+  transform: scaleY(1.1);
+  transform: scaleX(1.01);
 }
 
 .card-title {
   font-size: 1.3rem;
   text-align: center;
   padding: 0.3rem;
+  cursor: pointer;
+  transition: all 0.08s ease-in-out;
+}
+
+.card-title:hover {
+  color: var(--tertiary-color);
 }
 
 .card-img {
-  margin: 0 auto;
+  display: block;
+  margin: 0.4rem auto;
   height: 250px;
-  width: 100%;
+  width: 175px;
   object-fit: contain;
   border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.08s ease-in-out;
+}
+
+.card-img:hover {
+  transform: scale(1.05);
 }
 
 .card-details {
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .card-details p {
-  margin-bottom: 0.2rem;
-  margin-top: 0.2rem;
+  margin-bottom: 0.3rem;
+  margin-top: 0.3rem;
 }
