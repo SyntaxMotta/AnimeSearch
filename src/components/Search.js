@@ -1,6 +1,5 @@
-import React, { useState, useContext, useEffect } from 'react';
+import React, { useState, useContext } from 'react';
 import AnimeContext from '../context/animes/animeContext';
-import GenreButtons from './GenreButtons';
 
 export const Search = () => {
   const animeContext = useContext(AnimeContext);

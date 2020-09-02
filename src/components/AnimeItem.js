@@ -1,4 +1,5 @@
 import React from 'react';
+import * as moment from 'moment';
 
 const AnimeItem = ({ anime }) => {
   return (
@@ -6,11 +7,7 @@ const AnimeItem = ({ anime }) => {
       <a href={anime.url}>
         <h2 className="card-title">{anime.title}</h2>
 
-        <img
-          src={anime.image_url}
-          alt="Anime poster image"
-          className="card-img"
-        />
+        <img src={anime.image_url} alt="Anime poster" className="card-img" />
       </a>
       <div className="card-details">
         <p>
@@ -22,23 +19,20 @@ const AnimeItem = ({ anime }) => {
           </p>
         )}
 
-        {!anime.start_date ? (
-          <p></p>
-        ) : (
+        {anime.start_date && (
           <p>
             <strong>Start Date: </strong>
-            {anime.start_date}
+            {moment(anime.start_date).format('DD/MM/YYYY')}
           </p>
         )}
 
-        {!anime.end_date ? (
-          <p></p>
-        ) : (
+        {anime.end_date && (
           <p>
             <strong>End Date: </strong>
-            {anime.end_date}
+            {moment(anime.end_date).format('DD/MM/YYYY')}
           </p>
         )}
+
         <p>
           {anime.type === 'Movie' ? (
             <strong>Movie</strong>
