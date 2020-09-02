@@ -14,7 +14,7 @@ const AnimeState = (props) => {
   // Search Animes
   const searchAnimes = async (text) => {
     const res = await axios.get(
-      `https://api.jikan.moe/v4/search/anime?q=${text}&page=1`
+      `https://api.jikan.moe/v3/search/anime?q=${text}&page=1`
     );
 
     dispatch({
